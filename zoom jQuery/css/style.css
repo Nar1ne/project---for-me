@@ -1,0 +1,52 @@
+body {
+  position:relative;
+	overflow: hidden;
+  margin:0;
+  padding:0;
+}
+.background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("../img/img-02.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: blur(4px);
+	transform: scale(1.1);
+}
+.zoom-container {
+	position: relative;
+	z-index: 2;
+}
+.zoom {
+	background-image: url("../img/img-02.jpg");
+	background-repeat: no-repeat;
+	width: 1024px;
+	overflow: hidden;
+	cursor: zoom-in;
+	margin: auto;
+	filter: none !important;
+}
+p {
+  position:absolute;
+  top:10%;
+  left:50%;
+  transform: translate(-50%);
+  color: rgba(255,255,255,0.8);
+  font-family: Arial;
+  font-size:30px;
+  transition:all .5s;
+}
+img {
+	transition: opacity .5s;
+	display: block;
+	width: 100%;
+}
+img:hover {
+	opacity: 0;
+}
+.zoom:hover p {
+  opacity:0.2; 
+}
